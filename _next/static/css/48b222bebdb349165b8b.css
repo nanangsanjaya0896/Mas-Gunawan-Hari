@@ -12459,3 +12459,27 @@ i[class^=flaticon-]:before {
 .flaticon-user:before {
     content: "\f121"
 }
+/* ===== Orbit animasi hero (Hari Gunawan) ===== */
+.static-hero .static-hero-right{--orbit-pad:46px;--orbit-icon:64px;--orbit-speed:30s}
+.static-hero .static-hero-right .static-hero-img-inner{position:relative}
+.static-hero .static-hero-right .orbit-ring{position:absolute;left:50%;top:50%;width:calc(100% + var(--orbit-pad)*2);height:calc(100% + var(--orbit-pad)*2);transform:translate(-50%,-50%);border:2px solid #3b82f6;border-radius:50%;opacity:.75;pointer-events:none}
+.static-hero .static-hero-right .orbit-system{position:absolute;inset:0;animation:hgOrbitSpin var(--orbit-speed) linear infinite}
+.static-hero .static-hero-right .orbit-node{position:absolute;inset:0;transform:rotate(var(--oa,0deg));pointer-events:none}
+.static-hero .static-hero-right .orbit-node[data-a="0"]{--oa:0deg}
+.static-hero .static-hero-right .orbit-node[data-a="60"]{--oa:60deg}
+.static-hero .static-hero-right .orbit-node[data-a="120"]{--oa:120deg}
+.static-hero .static-hero-right .orbit-node[data-a="180"]{--oa:180deg}
+.static-hero .static-hero-right .orbit-node[data-a="240"]{--oa:240deg}
+.static-hero .static-hero-right .orbit-node[data-a="300"]{--oa:300deg}
+.static-hero .static-hero-right .orbit-dot{position:absolute;left:50%;top:calc(-1 * var(--orbit-pad));width:var(--orbit-icon);height:var(--orbit-icon);margin-left:calc(var(--orbit-icon) / -2);margin-top:calc(var(--orbit-icon) / -2);transform:rotate(calc(-1 * var(--oa,0deg)))}
+.static-hero .static-hero-right .orbit-face{width:100%;height:100%;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.35);animation:hgOrbitCounter var(--orbit-speed) linear infinite}
+.static-hero .static-hero-right .orbit-face img{width:58%;height:58%;border-radius:0;object-fit:contain}
+.static-hero .static-hero-right:hover .orbit-system,.static-hero .static-hero-right:hover .orbit-face{animation-play-state:paused}
+@keyframes hgOrbitSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes hgOrbitCounter{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+@media (prefers-reduced-motion:reduce){.static-hero .static-hero-right .orbit-system,.static-hero .static-hero-right .orbit-face{animation:none}}
+@media(max-width:1400px){.static-hero .static-hero-right{--orbit-pad:40px;--orbit-icon:56px}}
+@media(max-width:1199px){.static-hero .static-hero-right{--orbit-pad:34px;--orbit-icon:52px}}
+@media(max-width:991px){.static-hero .static-hero-right{--orbit-pad:32px;--orbit-icon:50px}}
+@media(max-width:767px){.static-hero .static-hero-right{--orbit-pad:28px;--orbit-icon:46px}}
+@media(max-width:575px){.static-hero .static-hero-right{--orbit-pad:24px;--orbit-icon:40px}}
