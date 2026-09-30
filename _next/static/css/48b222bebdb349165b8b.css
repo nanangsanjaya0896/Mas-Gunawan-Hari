@@ -12774,3 +12774,42 @@ header .navbar-brand.site-logo img,header .navbar-brand img{display:none !import
 .wpo-contact-area .wpo-contact-info .info-item .info-wrap{display:flex;align-items:center;gap:12px}
 .wpo-contact-area .wpo-contact-info .info-item .info-icon{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:rgba(89,195,120,.14);display:flex;align-items:center;justify-content:center;color:#59c378}
 @media(max-width:575px){.wpo-contact-area .wpo-wpo-contact-form-map .wpo-contact-info{margin-top:26px}}
+
+/* ================= FORM KONTAK: KOTAK RAPI + TEKS TIDAK MLEPET KIRI ================= */
+.wpo-contact-area .wpo-wpo-contact-form-map .wpo-contact-form{padding:40px 36px 36px !important;border-radius:22px !important;border:1px solid rgba(255,255,255,.1) !important;background:linear-gradient(165deg,rgba(255,255,255,.07),rgba(255,255,255,.025)) !important;box-shadow:0 24px 60px rgba(0,0,0,.35) !important;margin-bottom:0 !important}
+.wpo-contact-area .wpo-wpo-contact-form-map .wpo-contact-form h2{margin:0 0 24px !important;text-align:center}
+.wpo-contact-area .wpo-wpo-contact-form-map form .row{margin:0 -7px !important}
+.wpo-contact-area .wpo-wpo-contact-form-map form .row > [class*="col"]{padding:0 7px !important}
+.wpo-contact-area .wpo-wpo-contact-form-map form .form-field{margin-bottom:16px !important}
+.wpo-contact-area .wpo-wpo-contact-form-map form .form-field input,
+.wpo-contact-area .wpo-wpo-contact-form-map form .form-field select,
+.wpo-contact-area .wpo-wpo-contact-form-map form textarea{
+  height:auto !important;min-height:52px;width:100%;
+  background:rgba(255,255,255,.07) !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  border-radius:14px !important;
+  padding:14px 18px !important;
+  margin:0 !important;
+  color:#fff !important;font-size:15px !important;font-weight:400;line-height:1.5;text-align:left;
+  box-shadow:none;
+  transition:border-color .25s ease,box-shadow .25s ease,background .25s ease
+}
+.wpo-contact-area .wpo-wpo-contact-form-map form .form-field input::placeholder,
+.wpo-contact-area .wpo-wpo-contact-form-map form textarea::placeholder{color:rgba(255,255,255,.45) !important;opacity:1}
+.wpo-contact-area .wpo-wpo-contact-form-map form .form-field select{appearance:none;-webkit-appearance:none;padding-right:44px !important;background-image:linear-gradient(45deg,transparent 50%,rgba(255,255,255,.5) 50%),linear-gradient(135deg,rgba(255,255,255,.5) 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px,6px 6px;background-repeat:no-repeat;cursor:pointer}
+.wpo-contact-area .wpo-wpo-contact-form-map form .form-field select option{background:#141414;color:#fff}
+.wpo-contact-area .wpo-wpo-contact-form-map form textarea{min-height:160px;resize:vertical;display:block}
+.wpo-contact-area .wpo-wpo-contact-form-map form .form-field input:focus,
+.wpo-contact-area .wpo-wpo-contact-form-map form .form-field select:focus,
+.wpo-contact-area .wpo-wpo-contact-form-map form textarea:focus{
+  border-color:rgba(89,195,120,.75) !important;
+  box-shadow:0 0 0 4px rgba(89,195,120,.16) !important;
+  background:rgba(255,255,255,.08) !important;outline:none
+}
+.wpo-contact-area .wpo-wpo-contact-form-map .submit-area{margin-top:22px !important;text-align:center}
+@media(max-width:600px){
+  .wpo-contact-area .wpo-wpo-contact-form-map .wpo-contact-form{padding:30px 20px 28px !important;border-radius:18px !important}
+  .wpo-contact-area .wpo-wpo-contact-form-map form .form-field input,
+  .wpo-contact-area .wpo-wpo-contact-form-map form .form-field select,
+  .wpo-contact-area .wpo-wpo-contact-form-map form textarea{font-size:16px !important}
+}
