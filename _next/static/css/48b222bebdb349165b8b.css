@@ -12638,3 +12638,31 @@ html{scroll-behavior:smooth}
     .wpo-service-area .wpo-service-item:hover,.wpo-project-area .wpo-project-item:hover,.wpo-blog-section .wpo-blog-item:hover,.wpo-pricing-section .wpo-pricing-item:hover{animation:none}
   }
 }
+
+/* ================= REVISI: HERO ANIMASI + NAVBAR NAMA + CTA ================= */
+/* — 2) Nama 'Hari Gunawan.' di kiri navbar (teks saja, tanpa logo) — */
+header .row>[class*="col"]:has(>.navbar-header){display:flex !important;flex:0 0 auto !important;max-width:none !important}
+header .navbar-brand.site-logo{display:flex !important;align-items:center;font-family:'Space Grotesk',sans-serif;font-size:19px !important;font-weight:700;color:#fff !important;letter-spacing:-0.01em;white-space:nowrap;padding:4px 10px 4px 12px;text-decoration:none;line-height:1.2 !important}
+header .navbar-brand.site-logo img,header .navbar-brand img{display:none !important}
+@media(max-width:991px){header .navbar-brand.site-logo{font-size:15px !important;padding:4px 6px}}
+/* — Navbar diperlebar agar muat nama + menu — */
+.wpo-header-style-1 .wpo-site-header .navigation.navbar{max-width:1020px}
+/* — Tombol Unduh CV sedikit ke kiri — */
+.wpo-header-style-1 .wpo-site-header .navigation.navbar{padding:8px 22px 8px 14px !important}
+
+/* — 1) Animasi masuk untuk isi hero (stagger) + melayang halus — */
+@keyframes heroIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes heroFloat{from{transform:translateY(0)}to{transform:translateY(-12px)}}
+@keyframes ringPulse{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.03)}}
+@media (prefers-reduced-motion: no-preference){
+  .static-hero .slide-title{animation:heroIn .85s cubic-bezier(.2,.7,.3,1) backwards}
+  .static-hero .slide-sub-title{animation:heroIn .85s .16s cubic-bezier(.2,.7,.3,1) backwards}
+  .static-hero .slide-text{animation:heroIn .85s .3s cubic-bezier(.2,.7,.3,1) backwards}
+  .static-hero .slide-btn{animation:heroIn .85s .44s cubic-bezier(.2,.7,.3,1) backwards}
+  .static-hero .static-hero-img-inner > img{animation:heroFloat 5.5s ease-in-out infinite alternate}
+  .static-hero .orbit-ring{animation:ringPulse 5.5s ease-in-out infinite}
+}
+
+/* — 3) CTA hero sedikit dinaikkan + tetap di atas saat parallax — */
+.static-hero .slide-text p{margin-bottom:22px !important}
+.static-hero .slide-btn{margin-top:-6px;position:relative;z-index:5}
