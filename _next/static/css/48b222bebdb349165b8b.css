@@ -12689,3 +12689,15 @@ header .navbar-brand.site-logo img,header .navbar-brand img{display:none !import
   .float-btn svg{width:26px;height:26px}
   .float-ai{font-size:16px}
 }
+
+/* ================= REVISI: rapikan navbar mobile (Unduh CV tidak mepet kanan) ================= */
+@media(max-width:991px){
+  .navigation .row>[class*="col"]{min-width:0}
+  .navigation .row>.col-3{flex:0 0 auto !important;max-width:none !important}
+  header .row>[class*="col"]:has(>.navbar-header){flex:0 1 auto !important;overflow:hidden}
+  .navigation .row>.col-2{flex:0 0 auto !important;max-width:none !important}
+}
+@media(max-width:575px){
+  header .navbar-brand.site-logo{font-size:14px !important;padding:4px}
+  .navigation.navbar{padding:8px 16px 8px 12px !important}
+}
