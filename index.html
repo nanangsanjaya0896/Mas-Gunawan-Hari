@@ -1699,6 +1699,20 @@
     chat.classList.toggle('open');
     if(chat.classList.contains('open')){input.focus();}
   });}
+
+  /* ---------- ORBIT: fallback agar pasti berjalan ---------- */
+  function forceOrbit(){
+    var orb=document.querySelector('.orbit-system');
+    if(!orb)return;
+    var anims=(typeof orb.getAnimations==='function')?orb.getAnimations():[];
+    if(!anims.length){
+      orb.style.animation='hgOrbitSpin 20s linear infinite';
+      var faces=document.querySelectorAll('.orbit-face');
+      for(var i=0;i<faces.length;i++){faces[i].style.animation='hgOrbitCounter 20s linear infinite';}
+    }
+  }
+  if(document.readyState==='complete'){setTimeout(forceOrbit,300);}
+  else{window.addEventListener('load',function(){setTimeout(forceOrbit,300);});}
 })();
 </script></body>
 

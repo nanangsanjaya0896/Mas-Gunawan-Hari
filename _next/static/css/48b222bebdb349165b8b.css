@@ -12813,3 +12813,26 @@ header .navbar-brand.site-logo img,header .navbar-brand img{display:none !import
   .wpo-contact-area .wpo-wpo-contact-form-map form .form-field select,
   .wpo-contact-area .wpo-wpo-contact-form-map form textarea{font-size:16px !important}
 }
+
+/* ================= ORBIT: DIPAKSA BERJALAN + FOTO PROFIL LEBIH KECIL ================= */
+.static-hero .static-hero-right{--orbit-speed:20s}
+.static-hero .static-hero-right .orbit-system{
+  animation-name:hgOrbitSpin !important;
+  animation-duration:var(--orbit-speed) !important;
+  animation-timing-function:linear !important;
+  animation-iteration-count:infinite !important;
+}
+.static-hero .static-hero-right .orbit-face{
+  animation-name:hgOrbitCounter !important;
+  animation-duration:var(--orbit-speed) !important;
+  animation-timing-function:linear !important;
+  animation-iteration-count:infinite !important;
+}
+/* Foto profil diperkecil (sebelumnya ~820px) */
+.static-hero .static-hero-right .static-hero-img-inner{width:620px;height:620px}
+.static-hero .static-hero-right .static-hero-img-inner > img{width:100%;height:100%;object-fit:cover;box-sizing:border-box;display:block}
+@media(max-width:1400px){.static-hero .static-hero-right .static-hero-img-inner{width:500px;height:500px}}
+@media(max-width:1199px){.static-hero .static-hero-right .static-hero-img-inner{width:450px;height:450px}}
+@media(max-width:991px){.static-hero .static-hero-right .static-hero-img-inner{width:400px;height:400px}}
+@media(max-width:767px){.static-hero .static-hero-right .static-hero-img-inner{width:330px;height:330px}}
+@media(max-width:575px){.static-hero .static-hero-right .static-hero-img-inner{width:260px;height:260px}}
