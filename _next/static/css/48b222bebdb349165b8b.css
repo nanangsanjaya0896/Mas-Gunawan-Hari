@@ -12598,3 +12598,43 @@ header .row>[class*="col"]:has(>.navbar-header){display:none !important}
 @media(max-width:991.98px){.header-right .theme-btn{white-space:nowrap;padding:11px 14px !important}}
 
 /* Foto tengah orbit: pakai foto about.jpg (root repo) */
+
+/* ================= MODERN UI REFRESH ================= */
+/* — Fondasi: scrollbar, seleksi, fokus — */
+html{scroll-behavior:smooth}
+::selection{background:rgba(89,195,120,.32);color:#fff}
+*::-webkit-scrollbar{width:10px;height:10px}
+*::-webkit-scrollbar-track{background:#0c0e11}
+*::-webkit-scrollbar-thumb{background:#2b3138;border-radius:99px;border:2px solid #0c0e11}
+*::-webkit-scrollbar-thumb:hover{background:#3d4650}
+:focus-visible{outline:2px solid rgba(89,195,120,.85);outline-offset:3px;border-radius:8px}
+
+/* — Tombol modern: gradasi hijau + angkat saat hover — */
+.theme-btn,.wpo-about .about-btns .theme-btn{background:linear-gradient(135deg,#5cc982 0%,#3fa968 100%) !important;color:#fff !important;border-radius:999px !important;box-shadow:0 10px 26px rgba(89,195,120,.26);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;font-weight:600;position:relative;overflow:hidden}
+.theme-btn:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(89,195,120,.4);filter:brightness(1.06);color:#fff !important}
+.theme-btn:active{transform:translateY(-1px)}
+
+/* — Kartu kaca modern (layanan, proyek, blog, pricing, testimoni) — */
+.wpo-service-item,.wpo-pricing-item,.wpo-testimonial-items,.wpo-blog-item{background:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.018)) !important;border:1px solid rgba(255,255,255,.09) !important;border-radius:22px !important;box-shadow:0 16px 40px rgba(0,0,0,.28);transition:transform .35s cubic-bezier(.2,.7,.3,1),box-shadow .35s ease,border-color .35s ease}
+.wpo-service-item:hover,.wpo-pricing-item:hover,.wpo-blog-item:hover{transform:translateY(-8px);border-color:rgba(89,195,120,.42) !important;box-shadow:0 28px 56px rgba(0,0,0,.42),0 0 24px rgba(89,195,120,.1)}
+.wpo-testimonial-items:hover{transform:translateY(-6px);border-color:rgba(89,195,120,.35) !important}
+
+/* — Kartu proyek: radius + zoom gambar halus — */
+.wpo-project-item{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.09);box-shadow:0 16px 40px rgba(0,0,0,.3);transition:transform .35s cubic-bezier(.2,.7,.3,1),box-shadow .35s ease,border-color .35s ease}
+.wpo-project-item:hover{transform:translateY(-8px);border-color:rgba(89,195,120,.42);box-shadow:0 28px 56px rgba(0,0,0,.45),0 0 24px rgba(89,195,120,.12)}
+.wpo-project-item img{transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+.wpo-project-item:hover img{transform:scale(1.07)}
+
+/* — Form kontak modern — */
+.wpo-contact-area input,.wpo-contact-area textarea,.wpo-contact-area .form-control{background:rgba(255,255,255,.055) !important;border:1px solid rgba(255,255,255,.13) !important;border-radius:14px !important;color:#fff !important;transition:border-color .25s ease,box-shadow .25s ease,background .25s ease}
+.wpo-contact-area input::placeholder,.wpo-contact-area textarea::placeholder{color:rgba(255,255,255,.42)}
+.wpo-contact-area input:focus,.wpo-contact-area textarea:focus,.wpo-contact-area .form-control:focus{border-color:rgba(89,195,120,.75) !important;box-shadow:0 0 0 4px rgba(89,195,120,.16) !important;background:rgba(255,255,255,.08) !important;outline:none}
+
+/* — Reveal halus saat scroll (Chrome/Edge; browser lain tetap tampil normal) — */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .wpo-service-area .wpo-service-item,.wpo-project-area .wpo-project-item,.wpo-blog-section .wpo-blog-item,.wpo-pricing-section .wpo-pricing-item{animation:uiFadeUp linear both;animation-timeline: view();animation-range: entry 2% cover 26%}
+    @keyframes uiFadeUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+    .wpo-service-area .wpo-service-item:hover,.wpo-project-area .wpo-project-item:hover,.wpo-blog-section .wpo-blog-item:hover,.wpo-pricing-section .wpo-pricing-item:hover{animation:none}
+  }
+}
