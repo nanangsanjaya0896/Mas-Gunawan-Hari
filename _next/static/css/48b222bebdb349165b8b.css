@@ -12666,3 +12666,26 @@ header .navbar-brand.site-logo img,header .navbar-brand img{display:none !import
 /* — 3) CTA hero sedikit dinaikkan + tetap di atas saat parallax — */
 .static-hero .slide-text p{margin-bottom:22px !important}
 .static-hero .slide-btn{margin-top:-6px;position:relative;z-index:5}
+
+/* ================= REVISI: TOMBOL WA & AI MELAYANG + RING FOTO ================= */
+/* — Cincin putih / padding pada foto orbit — */
+.static-hero .static-hero-img-inner > img{padding:10px;background:#fff;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+
+/* — Tombol melayang (WA kanan, AI kiri) — */
+.float-btn{position:fixed;z-index:9990;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(0,0,0,.4);transition:transform .25s ease,box-shadow .25s ease;text-decoration:none}
+.float-btn svg{width:30px;height:30px;fill:#fff}
+.float-wa{right:24px;bottom:104px;background:#25d366}
+.float-ai{left:24px;bottom:104px;background:linear-gradient(135deg,#8b5cf6,#3b82f6);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:800;letter-spacing:.03em;line-height:1}
+.float-btn:hover{animation:none !important;transform:translateY(-5px) scale(1.07);box-shadow:0 22px 46px rgba(0,0,0,.52)}
+@media (prefers-reduced-motion: no-preference){
+  .float-wa{animation:floatBob 3.2s ease-in-out infinite}
+  .float-ai{animation:floatBob 3.2s .7s ease-in-out infinite}
+}
+@keyframes floatBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:575px){
+  .float-btn{width:52px;height:52px}
+  .float-wa{right:14px;bottom:92px}
+  .float-ai{left:14px;bottom:92px}
+  .float-btn svg{width:26px;height:26px}
+  .float-ai{font-size:16px}
+}
