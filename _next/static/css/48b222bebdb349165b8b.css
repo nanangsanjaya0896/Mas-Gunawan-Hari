@@ -12596,3 +12596,6 @@ header .row>[class*="col"]:has(>.navbar-header){display:none !important}
 .wpo-header-style-1 .wpo-site-header .header-right .theme-btn:before,.wpo-header-style-1 .wpo-site-header .header-right .theme-btn:after,.header-right .theme-btn:before,.header-right .theme-btn:after{display:none !important;content:none !important}
 
 @media(max-width:991.98px){.header-right .theme-btn{white-space:nowrap;padding:11px 14px !important}}
+
+/* Foto tengah orbit dihapus (sesuai permintaan) — tata letak orbit tetap */
+.static-hero .static-hero-right .static-hero-img-inner > img{visibility:hidden !important}
