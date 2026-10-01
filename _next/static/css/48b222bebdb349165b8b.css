@@ -12459,7 +12459,7 @@ i[class^=flaticon-]:before {
 .flaticon-user:before {
     content: "\f121"
 }
-/* ===== Orbit animasi hero (Hari Gunawan) ===== */
+/* ===== Orbit animasi hero (Gunawan Hari) ===== */
 .static-hero .static-hero-right{--orbit-pad:46px;--orbit-icon:64px;--orbit-speed:30s}
 .static-hero .static-hero-right .static-hero-img-inner{position:relative}
 .static-hero .static-hero-right .orbit-ring{position:absolute;left:50%;top:50%;width:calc(100% + var(--orbit-pad)*2);height:calc(100% + var(--orbit-pad)*2);transform:translate(-50%,-50%);border:2px solid #3b82f6;border-radius:50%;opacity:.75;pointer-events:none}
@@ -12539,7 +12539,7 @@ p{line-height:1.7}
 
 footer .site-logo,.site-footer .site-logo,footer a.site-logo{font-size:28px !important;line-height:1.25 !important;white-space:nowrap;letter-spacing:-0.01em}
 
-/* Navbar: hapus brand (logo avatar + teks "Hari Gunawan.") — hanya di header */
+/* Navbar: hapus brand (logo avatar + teks "Gunawan Hari.") — hanya di header */
 header .navbar-brand,header .navbar-brand.site-logo,.wpo-header-style-1 .navbar-brand{display:none !important}
 
 /* ================= NAVBAR PILL (ala nanangdigital) ================= */
@@ -12640,7 +12640,7 @@ html{scroll-behavior:smooth}
 }
 
 /* ================= REVISI: HERO ANIMASI + NAVBAR NAMA + CTA ================= */
-/* — 2) Nama 'Hari Gunawan.' di kiri navbar (teks saja, tanpa logo) — */
+/* — 2) Nama 'Gunawan Hari.' di kiri navbar (teks saja, tanpa logo) — */
 header .row>[class*="col"]:has(>.navbar-header){display:flex !important;flex:0 0 auto !important;max-width:none !important}
 header .navbar-brand.site-logo{display:flex !important;align-items:center;font-family:'Space Grotesk',sans-serif;font-size:19px !important;font-weight:700;color:#fff !important;letter-spacing:-0.01em;white-space:nowrap;padding:4px 10px 4px 12px;text-decoration:none;line-height:1.2 !important}
 header .navbar-brand.site-logo img,header .navbar-brand img{display:none !important}
@@ -12855,3 +12855,24 @@ header .navbar-brand.site-logo img,header .navbar-brand img{display:none !import
 .article-content p{color:rgba(255,255,255,.78);font-size:15.5px;line-height:1.85;margin:0 0 15px}
 .article-content h3{color:#fff;font-size:18px;margin:22px 0 10px}
 @media(max-width:575px){.article-modal{padding:12px}.article-box{padding:30px 20px 26px;border-radius:18px}}
+
+/* ================= ANIMASI SELURUH HALAMAN + GLOW TOMBOL WA & AI ================= */
+/* — Paksa animasi utama tetap berjalan (abaikan setelan reduce-motion perangkat) — */
+.static-hero .slide-title{animation:heroIn .85s cubic-bezier(.2,.7,.3,1) backwards !important}
+.static-hero .slide-sub-title{animation:heroIn .85s .16s cubic-bezier(.2,.7,.3,1) backwards !important}
+.static-hero .slide-text{animation:heroIn .85s .3s cubic-bezier(.2,.7,.3,1) backwards !important}
+.static-hero .slide-btn{animation:heroIn .85s .44s cubic-bezier(.2,.7,.3,1) backwards !important}
+.static-hero .static-hero-img-inner > img{animation:heroFloat 5.5s ease-in-out infinite alternate !important}
+.static-hero .orbit-ring{animation:ringPulse 5.5s ease-in-out infinite !important}
+
+/* — Elemen muncul saat scroll (IntersectionObserver) — */
+.wpo-service-area .wpo-service-item,.wpo-project-area .wpo-project-item,.wpo-blog-section .wpo-blog-item,.wpo-pricing-section .wpo-pricing-item{animation:none !important}
+.reveal{opacity:0;translate:0 36px;transition:opacity .75s ease,translate .75s cubic-bezier(.2,.7,.3,1)}
+.reveal.in-view{opacity:1;translate:0 0}
+
+/* — Glow "hijau nyala" tombol WA + glow AI — */
+.float-wa{box-shadow:0 0 26px rgba(37,211,102,.6),0 14px 34px rgba(0,0,0,.4) !important;animation:floatBob 3.2s ease-in-out infinite,glowWa 2.6s ease-in-out infinite !important}
+.float-ai{box-shadow:0 0 26px rgba(139,92,246,.6),0 14px 34px rgba(0,0,0,.4) !important;animation:floatBob 3.2s .7s ease-in-out infinite,glowAi 2.6s .35s ease-in-out infinite !important}
+.float-btn:hover{animation:none !important;transform:translateY(-5px) scale(1.07);box-shadow:0 0 34px rgba(255,255,255,.28),0 22px 46px rgba(0,0,0,.52) !important}
+@keyframes glowWa{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55),0 0 26px rgba(37,211,102,.6),0 14px 34px rgba(0,0,0,.4)}70%{box-shadow:0 0 0 22px rgba(37,211,102,0),0 0 26px rgba(37,211,102,.6),0 14px 34px rgba(0,0,0,.4)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 0 26px rgba(37,211,102,.6),0 14px 34px rgba(0,0,0,.4)}}
+@keyframes glowAi{0%{box-shadow:0 0 0 0 rgba(139,92,246,.55),0 0 26px rgba(139,92,246,.6),0 14px 34px rgba(0,0,0,.4)}70%{box-shadow:0 0 0 22px rgba(139,92,246,0),0 0 26px rgba(139,92,246,.6),0 14px 34px rgba(0,0,0,.4)}100%{box-shadow:0 0 0 0 rgba(139,92,246,0),0 0 26px rgba(139,92,246,.6),0 14px 34px rgba(0,0,0,.4)}}
