@@ -12836,3 +12836,22 @@ header .navbar-brand.site-logo img,header .navbar-brand img{display:none !import
 @media(max-width:991px){.static-hero .static-hero-right .static-hero-img-inner{width:400px;height:400px}}
 @media(max-width:767px){.static-hero .static-hero-right .static-hero-img-inner{width:330px;height:330px}}
 @media(max-width:575px){.static-hero .static-hero-right .static-hero-img-inner{width:260px;height:260px}}
+
+/* ================= FIX: RING ORBIT SEPUSAT FOTO (ringPulse tanpa hilangkan translate) ================= */
+@keyframes ringPulse{0%,100%{opacity:.85;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.03)}}
+
+/* ================= ARTIKEL: EXCERPT KARTU + MODAL BACA ARTIKEL ================= */
+.blog-excerpt{color:rgba(255,255,255,.62);font-size:14.5px;line-height:1.65;margin:12px 0 6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.article-modal{position:fixed;inset:0;z-index:9997;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(5,7,10,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.article-modal.open{display:flex}
+.article-box{position:relative;width:min(760px,100%);max-height:min(84vh,900px);overflow-y:auto;background:linear-gradient(165deg,#171a1f,#101216);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:38px 38px 34px;box-shadow:0 40px 90px rgba(0,0,0,.55)}
+.article-box::-webkit-scrollbar{width:8px}
+.article-box::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18);border-radius:99px}
+.article-close{position:absolute;top:14px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-size:22px;line-height:1;cursor:pointer;transition:background .2s ease}
+.article-close:hover{background:rgba(255,255,255,.16)}
+.article-meta{color:#59c378;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.article-box h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,2.4vw,30px);line-height:1.32;color:#fff;margin:0 0 20px;padding-right:36px}
+.article-hero-img{width:100%;border-radius:14px;margin:0 0 20px;display:block}
+.article-content p{color:rgba(255,255,255,.78);font-size:15.5px;line-height:1.85;margin:0 0 15px}
+.article-content h3{color:#fff;font-size:18px;margin:22px 0 10px}
+@media(max-width:575px){.article-modal{padding:12px}.article-box{padding:30px 20px 26px;border-radius:18px}}
